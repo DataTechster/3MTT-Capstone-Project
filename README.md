@@ -6,7 +6,6 @@ A Power BI-driven analysis of bank customer complaints, adapted to reflect the r
 ![tool](https://img.shields.io/badge/tool-Power%20BI-yellow)
 ![track](https://img.shields.io/badge/3MTT-DA--13-blue)
 
----
 
 ## Table of Contents
 1. [Problem Definition](#1-problem-definition)
@@ -24,7 +23,6 @@ A Power BI-driven analysis of bank customer complaints, adapted to reflect the r
 13. [Demo](#13-demo)
 14. [Future Improvements](#14-future-improvements)
 
----
 
 ## 1. Problem Definition
 
@@ -32,9 +30,8 @@ Nigerian bank customers face recurring frustrations — failed transfers, USSD/a
 
 **Objective:** Build a Power BI dashboard that categorizes and visualizes bank complaints in a way that is *recognizably Nigerian* — surfacing which issues occur most, which banks/channels they cluster around, and how resolution outcomes vary — to demonstrate an end-to-end data analytics workflow from raw data to actionable insight.
 
-> _Optional: add 1–2 sentences here on who this is "for" (e.g. bank ops teams, regulators, or as a portfolio demonstration) if you want to sharpen the framing._
+> This is a portfolio project; and could serve as a tool to help bank regulators in their control and monitoring of banks.
 
----
 
 ## 2. Dataset Profiling
 
@@ -44,17 +41,29 @@ A second candidate — a "Nigerian-adapted" version of the dataset — was profi
 
 **Decision:** Rather than force-fit unusable or non-Nigerian data, a fully synthetic dataset was designed and generated from scratch — with intentional, documented statistical relationships between fields — per the 3MTT brief's explicit allowance for synthetic data where real regional data is unavailable.
 
----
 
 ## 3. Data Cleaning
+Cleaned the data using Power Query including:
 
-> _Fill in with your actual cleaning steps once finalized, e.g.:_
-- Standardized date formats, currency fields (₦), and categorical text (bank names, channels)
-- Removed/flagged duplicate and null records
-- Validated category and channel fields against a controlled vocabulary
-- Checked resolution-time values for logical consistency (no negative durations, no resolution before complaint date)
+Removing duplicates
+Handling missing values
+Standardizing date formats
+Cleaning text fields
+Standardizing bank names
+Removing unnecessary columns
+Correcting inconsistent categories
 
----
+I also created new fields such as:
+
+Complaint Month
+Complaint Quarter
+Complaint Year
+Complaint Weekday
+Region
+Resolution Time
+Complaint Severity
+Digital vs Physical Channel
+
 
 ## 4. Nigerian Banking Adaptation
 
@@ -67,7 +76,6 @@ The dataset was rebuilt around Nigerian banking realities instead of simply rela
   - Transaction amount distribution depends on channel (USSD vs POS vs ATM vs mobile app)
 - Documented generation logic so the dataset is transparent about being synthetic-but-realistic, not claimed as real customer data
 
----
 
 ## 5. Text Categorization
 
