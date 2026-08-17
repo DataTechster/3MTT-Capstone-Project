@@ -1,2 +1,200 @@
-# 3MTT-Capstone-Project
-Nigerian Bank Complaints Analysis
+# Nigerian Banking Complaint Analysis MVP — Adapted Customer Complaint Dataset
+
+A Power BI-driven analysis of bank customer complaints, adapted to reflect the realities of Nigerian retail banking — built as the DA-13 capstone project for the 3MTT NextGen Cohort (Data Analysis & Visualization track).
+
+![status](https://img.shields.io/badge/status-complete-brightgreen)
+![tool](https://img.shields.io/badge/tool-Power%20BI-yellow)
+![track](https://img.shields.io/badge/3MTT-DA--13-blue)
+
+---
+
+## Table of Contents
+1. [Problem Definition](#1-problem-definition)
+2. [Dataset Profiling](#2-dataset-profiling)
+3. [Data Cleaning](#3-data-cleaning)
+4. [Nigerian Banking Adaptation](#4-nigerian-banking-adaptation)
+5. [Text Categorization](#5-text-categorization)
+6. [Exploratory Data Analysis](#6-exploratory-data-analysis)
+7. [MVP Development](#7-mvp-development)
+8. [Power BI Dashboard](#8-power-bi-dashboard)
+9. [Insights & Recommendations](#9-insights--recommendations)
+10. [MVP Validation](#10-mvp-validation)
+11. [Limitations & Data Ethics](#11-limitations--data-ethics)
+12. [Deliverables](#12-deliverables)
+13. [Demo](#13-demo)
+14. [Future Improvements](#14-future-improvements)
+
+---
+
+## 1. Problem Definition
+
+Nigerian bank customers face recurring frustrations — failed transfers, USSD/app downtime, unauthorized debits, and unresolved disputes — but there is little public, structured data that captures these patterns in a way banks or regulators (like the CBN) can act on. Most available complaint datasets (e.g. the U.S. CFPB dataset) reflect a different banking system entirely: card networks, dispute-resolution timelines, and channels that don't map onto Nigeria's cash-and-USSD-heavy retail banking environment.
+
+**Objective:** Build a Power BI dashboard that categorizes and visualizes bank complaints in a way that is *recognizably Nigerian* — surfacing which issues occur most, which banks/channels they cluster around, and how resolution outcomes vary — to demonstrate an end-to-end data analytics workflow from raw data to actionable insight.
+
+> _Optional: add 1–2 sentences here on who this is "for" (e.g. bank ops teams, regulators, or as a portfolio demonstration) if you want to sharpen the framing._
+
+---
+
+## 2. Dataset Profiling
+
+The project began with the CFPB "Bank account or service" complaints dataset — 84,811 records, 2012–2017, U.S. banks and states — as a structural reference for what a real-world complaints dataset looks like (fields, categories, resolution outcomes, timelines).
+
+A second candidate — a "Nigerian-adapted" version of the dataset — was profiled and found to have **statistically independent, shuffled columns** (e.g. bank names appearing in the resolution-outcome field), making it structurally meaningless. It was discarded after profiling confirmed the fields had no real relationship to one another.
+
+**Decision:** Rather than force-fit unusable or non-Nigerian data, a fully synthetic dataset was designed and generated from scratch — with intentional, documented statistical relationships between fields — per the 3MTT brief's explicit allowance for synthetic data where real regional data is unavailable.
+
+---
+
+## 3. Data Cleaning
+
+> _Fill in with your actual cleaning steps once finalized, e.g.:_
+- Standardized date formats, currency fields (₦), and categorical text (bank names, channels)
+- Removed/flagged duplicate and null records
+- Validated category and channel fields against a controlled vocabulary
+- Checked resolution-time values for logical consistency (no negative durations, no resolution before complaint date)
+
+---
+
+## 4. Nigerian Banking Adaptation
+
+The dataset was rebuilt around Nigerian banking realities instead of simply relabeling U.S. data:
+
+- **20,000 synthetic records** across **12 Nigerian banks**
+- Fields and categories reflect actual Nigerian retail banking pain points rather than U.S. equivalents (e.g. no "credit card dispute" — replaced with USSD and POS-specific issues)
+- Designed (not random) statistical relationships between fields, for example:
+  - Resolution time and resolution outcome depend on issue type
+  - Transaction amount distribution depends on channel (USSD vs POS vs ATM vs mobile app)
+- Documented generation logic so the dataset is transparent about being synthetic-but-realistic, not claimed as real customer data
+
+---
+
+## 5. Text Categorization
+
+Complaints are categorized into **7 Nigerian-banking-context categories**:
+
+| Category | Description |
+|---|---|
+| Failed Transfer | Transfer initiated but not completed / funds not received |
+| Excess Charges | Unexplained or disputed bank charges/fees |
+| USSD/App Failure | Failed or hung transactions via USSD code or mobile app |
+| Account Blocked | Account frozen or restricted without clear resolution |
+| POS Debit Without Reversal | POS transaction debited but not reversed after failure |
+| Unauthorized Debit | Debit not initiated by the customer |
+| ATM Dispensed No Cash | ATM debited the account but did not dispense cash |
+
+> _Add a line here on the method used — keyword rules, manual labeling, or a simple classifier — once you confirm which approach you used._
+
+---
+
+## 6. Exploratory Data Analysis
+
+> _Fill in with your actual EDA findings, e.g.:_
+- Distribution of complaints by category and by bank
+- Complaint volume trends over time
+- Resolution time by category (which issues take longest to resolve)
+- Channel breakdown (USSD vs app vs POS vs ATM) by complaint volume and amount
+
+---
+
+## 7. MVP Development
+
+The project was scoped as a Minimum Viable Product per the 3MTT DA-13 brief: a working, demonstrable dashboard built on a defensible dataset, rather than a fully production-scale system. Development moved from raw dataset design → cleaning → categorization → dashboard build, with each stage documented so the reasoning (especially around the synthetic-data decision) is transparent to anyone reviewing the repo.
+
+---
+
+## 8. Power BI Dashboard
+
+Built in **Power BI** (matching the 3MTT Power BI training track), the dashboard includes:
+
+> _Fill in with your actual pages/visuals, e.g.:_
+- Overview page: total complaints, top categories, top banks
+- Category deep-dive: resolution time and outcome by category
+- Channel analysis: complaint volume and amount by channel
+- Bank comparison view
+
+*(Add dashboard screenshots here once available — drop images into an `/assets` or `/screenshots` folder and embed with `![Dashboard Overview](assets/dashboard-overview.png)`)*
+
+---
+
+## 9. Insights & Recommendations
+
+> _Fill in with your actual top 3–5 findings once EDA/dashboard are finalized, e.g.:_
+- Which category drives the most complaints, and for which banks
+- Which channel has the longest average resolution time
+- A concrete recommendation banks/regulators could act on based on the pattern
+
+---
+
+## 10. MVP Validation
+
+> _Describe how you checked the MVP actually works/holds up, e.g.:_
+- Sanity-checked dashboard totals against the underlying dataset
+- Verified category logic against sample records
+- (If applicable) Gathered informal feedback from peers/mentors in the 3MTT cohort
+
+---
+
+## 11. Limitations & Data Ethics
+
+- **Synthetic data:** This dataset is fully synthetic and does not represent real customer complaints or real bank performance. It is explicitly *not* claiming to reflect actual outcomes at any named Nigerian bank — bank names are used for realism and structure, not as factual claims about those institutions.
+- **No real customer data used:** No real, identifiable customer information was used or is contained in this dataset, avoiding privacy concerns.
+- **Designed, not observed, relationships:** Statistical relationships between fields were deliberately designed to be realistic, not derived from real-world observation — conclusions should be read as illustrative of a method, not as verified facts about Nigerian banking.
+- **Bias disclosure:** Category definitions and relative frequencies reflect the author's judgment of common Nigerian banking complaints, not a statistically sampled survey.
+
+---
+
+## 12. Deliverables
+
+Per the 3MTT DA-13 brief, this repository contains:
+
+- [ ] Interactive Power BI dashboard (`.pbix`)
+- [ ] Cleaned dataset (`.csv`/`.xlsx`)
+- [ ] One-page insight summary (`.pdf`/`.md`)
+- [ ] 2–3 minute demo video (linked below)
+
+> _Check these off / link the actual files once uploaded to the repo._
+
+---
+
+## 13. Demo
+
+📹 _Add your demo video link here (YouTube/Loom/Drive) once recorded._
+
+---
+
+## 14. Future Improvements
+
+> _A few to consider — trim to what's actually true for you:_
+- Incorporate real, anonymized complaint data (e.g. via a partnership or public CBN dataset) if one becomes available
+- Add a text-classification model to automate categorization instead of rule-based logic
+- Extend to a Power BI Service-published, shareable live dashboard
+- Add year-over-year trend analysis if the dataset is extended with a longer time span
+
+---
+
+## Repository Structure
+
+```
+├── data/
+│   ├── raw/                # Original CFPB reference dataset
+│   └── processed/          # Final cleaned, adapted Nigerian dataset
+├── dashboard/
+│   └── bank_complaints.pbix
+├── docs/
+│   └── insight_summary.pdf
+├── assets/                 # Dashboard screenshots
+└── README.md
+```
+
+> _Adjust to match your actual folder layout._
+
+## Tools Used
+
+- **Power BI** — dashboard & DAX
+- **Excel/Python** — dataset generation and cleaning
+- 3MTT NextGen Cohort — Data Analysis & Visualization track (DA-13)
+
+## Author
+
+Built by Olaide as part of the 3MTT NextGen Cohort capstone project.
