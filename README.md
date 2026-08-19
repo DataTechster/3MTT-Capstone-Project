@@ -91,19 +91,17 @@ Complaints are categorized into **7 Nigerian-banking-context categories**:
 | Unauthorized Debit | Debit not initiated by the customer |
 | ATM Dispensed No Cash | ATM debited the account but did not dispense cash |
 
-> _Add a line here on the method used — keyword rules, manual labeling, or a simple classifier — once you confirm which approach you used._
 
----
+
 
 ## 6. Exploratory Data Analysis
 
-> _Fill in with your actual EDA findings, e.g.:_
 - Distribution of complaints by category and by bank
 - Complaint volume trends over time
 - Resolution time by category (which issues take longest to resolve)
 - Channel breakdown (USSD vs app vs POS vs ATM) by complaint volume and amount
 
----
+
 
 ## 7. MVP Development
 
@@ -115,33 +113,35 @@ The project was scoped as a Minimum Viable Product per the 3MTT DA-13 brief: a w
 
 Built in **Power BI** (matching the 3MTT Power BI training track), the dashboard includes:
 
-> _Fill in with your actual pages/visuals, e.g.:_
-- Overview page: total complaints, top categories, top banks
-- Category deep-dive: resolution time and outcome by category
-- Channel analysis: complaint volume and amount by channel
-- Bank comparison view
+- Executive Overview: total complaints, top categories, top banks
+  <img width="1338" height="796" alt="image" src="https://github.com/user-attachments/assets/ca2bf83c-b490-4a91-916a-8aaba49bc1d6" />
 
-*(Add dashboard screenshots here once available — drop images into an `/assets` or `/screenshots` folder and embed with `![Dashboard Overview](assets/dashboard-overview.png)`)*
+- Hidden Service Issues: resolution time and outcome by category
+  <img width="1404" height="807" alt="image" src="https://github.com/user-attachments/assets/c1b982e6-5fc6-46dd-ba1d-0b3701585133" />
 
----
+- Customer Experience analysis: complaint volume and amount by channel
+  <img width="1337" height="795" alt="image" src="https://github.com/user-attachments/assets/b748944c-68c8-4bc9-a779-5d2a7979bd15" />
+
+- Text Complaints Explorer:
+<img width="1324" height="798" alt="image" src="https://github.com/user-attachments/assets/332c424a-6c16-423f-ae31-e31c1cc0d850" />
+
+
 
 ## 9. Insights & Recommendations
 
-> _Fill in with your actual top 3–5 findings once EDA/dashboard are finalized, e.g.:_
 - Which category drives the most complaints, and for which banks
 - Which channel has the longest average resolution time
 - A concrete recommendation banks/regulators could act on based on the pattern
 
----
 
 ## 10. MVP Validation
 
-> _Describe how you checked the MVP actually works/holds up, e.g.:_
+_Describe how you checked the MVP actually works/holds up, e.g.:_
 - Sanity-checked dashboard totals against the underlying dataset
 - Verified category logic against sample records
 - (If applicable) Gathered informal feedback from peers/mentors in the 3MTT cohort
 
----
+
 
 ## 11. Limitations & Data Ethics
 
@@ -150,13 +150,14 @@ Built in **Power BI** (matching the 3MTT Power BI training track), the dashboard
 - **Designed, not observed, relationships:** Statistical relationships between fields were deliberately designed to be realistic, not derived from real-world observation — conclusions should be read as illustrative of a method, not as verified facts about Nigerian banking.
 - **Bias disclosure:** Category definitions and relative frequencies reflect the author's judgment of common Nigerian banking complaints, not a statistically sampled survey.
 
----
+
 
 ## 12. Deliverables
 
 Per the 3MTT DA-13 brief, this repository contains:
 
-- [ ] Interactive Power BI dashboard (`.pbix`)
+- [<img width="1324" height="798" alt="image" src="https://github.com/user-attachments/assets/b8fa359e-2273-445c-9de0-d59edede7551" />
+ ] Interactive Power BI dashboard (`.pbix`)
 - [ ] Cleaned dataset (`.csv`/`.xlsx`)
 - [ ] One-page insight summary (`.pdf`/`.md`)
 - [ ] 2–3 minute demo video (linked below)
