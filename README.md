@@ -206,4 +206,4 @@ Per the 3MTT DA-13 brief, this repository contains:
 
 ## Author
 
-Built by Olaide as part of the 3MTT NextGen Cohort capstone project.
+Built by Olaide Olabode as part of the 3MTT NextGen Cohort capstone project.
