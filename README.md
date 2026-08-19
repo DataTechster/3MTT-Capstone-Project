@@ -156,10 +156,10 @@ _Describe how you checked the MVP actually works/holds up, e.g.:_
 
 Per the 3MTT DA-13 brief, this repository contains:
 
-- [<img width="1324" height="798" alt="image" src="https://github.com/user-attachments/assets/b8fa359e-2273-445c-9de0-d59edede7551" />
- ] Interactive Power BI dashboard (`.pbix`)
-- [ ] Cleaned dataset (`.csv`/`.xlsx`)
-- [ ] One-page insight summary (`.pdf`/`.md`)
+
+["C:\Users\olaid\OneDrive\Documents\3MTT NEXTGEN_ CAPSTONE_PROJECT\3MTT Capstone.pbix" ] Interactive Power BI dashboard (`.pbix`)
+- ["C:\Users\olaid\Downloads\01_cleaned_nigerian_bank_complaints_mvp.csv" ] Cleaned dataset (`.csv`/`.xlsx`)
+- [ https://docs.google.com/document/d/1Lk74LAqhH2bK1A2PFDRoKpLUj3PzC-XEsSak0YQ_WZ8/edit?usp=sharing] One-page insight summary (`.pdf`/`.md`)
 - [ ] 2–3 minute demo video (linked below)
 
 > _Check these off / link the actual files once uploaded to the repo._
