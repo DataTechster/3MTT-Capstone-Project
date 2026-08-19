@@ -174,17 +174,23 @@ Per the 3MTT DA-13 brief, this repository contains:
 
 ## 14. Future Improvements
 
-> _A few to consider — trim to what's actually true for you:_
-- Incorporate real, anonymized complaint data (e.g. via a partnership or public CBN dataset) if one becomes available
-- Add a text-classification model to automate categorization instead of rule-based logic
-- Extend to a Power BI Service-published, shareable live dashboard
-- Add year-over-year trend analysis if the dataset is extended with a longer time span
+1. Strengthen transaction monitoring
+Improve detection and customer notification around suspicious transactions.
+2. Improve complaint escalation
+Identify complaints that exceed normal resolution periods.
+3. Strengthen digital-service monitoring
+Track recurring failures across mobile and online banking services.
+4. Use complaint text as an early-warning signal
+Recurring language and complaint themes can help identify service problems before they become widespread.
+5. Continuously improve the classifier
+Use validated complaint examples to refine categories and reduce the number of generic classifications
 
----
+
+
 
 ## Repository Structure
 
-```
+
 ├── data/
 │   ├── raw/                # Original CFPB reference dataset
 │   └── processed/          # Final cleaned, adapted Nigerian dataset
@@ -196,7 +202,7 @@ Per the 3MTT DA-13 brief, this repository contains:
 └── README.md
 ```
 
-> _Adjust to match your actual folder layout._
+
 
 ## Tools Used
 
